@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const authApi = createApi({
   reducerPath: 'authApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://sessionback.onrender.com/api/user/'}),
+  baseQuery: fetchBaseQuery({ baseUrl: 'path/to/api/user/'}),
 
   endpoints: (builder) => ({
     userReg: builder.mutation({
