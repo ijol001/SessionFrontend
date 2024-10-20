@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useUserRegMutation } from "../services/authApi";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-// import Cookies from 'js-cookie';
+
 
 const UserReg = () => {
   const [error, setError] = useState({ status: false, msg: '', type: '' });
@@ -37,7 +37,6 @@ const UserReg = () => {
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Add background noise
     for (let i = 0; i < 1000; i++) {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
@@ -45,7 +44,6 @@ const UserReg = () => {
       ctx.fillRect(x, y,1,2);
     }
 
-    // Draw the text with random position and rotation
     ctx.font = '37px Arial';
     ctx.textBaseline = 'middle';
     for (let i = 0; i < code.length; i++) {
@@ -60,7 +58,6 @@ const UserReg = () => {
       ctx.restore();
     }
 
-    // Add more noise lines
     for (let i = 0; i < 10; i++) {
       const xStart = Math.random() * canvas.width;
       const yStart = Math.random() * canvas.height;
