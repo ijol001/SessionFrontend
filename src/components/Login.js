@@ -43,18 +43,16 @@ const UserLogin = () => {
     const canvas = document.getElementById('captchaCanvas');
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Add background noise
+    
     for (let i = 0; i < 1000; i++) {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       ctx.fillStyle = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1.1)`;
       ctx.fillRect(x, y,1,2);
     }
-
-    // Draw the text with random position and rotation
     ctx.font = '37px Arial';
     ctx.textBaseline = 'middle';
+    
     for (let i = 0; i < code.length; i++) {
       const x = 30 + i * 30;
       const y = 50 + Math.random() * 20;
@@ -66,8 +64,6 @@ const UserLogin = () => {
       ctx.fillText(code[i], 0, 0);
       ctx.restore();
     }
-
-    // Add more noise lines
     for (let i = 0; i < 10; i++) {
       const xStart = Math.random() * canvas.width;
       const yStart = Math.random() * canvas.height;
